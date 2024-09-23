@@ -20,4 +20,24 @@ The project demonstrated that memory locality is a critical factor in optimizati
 
 For detailed implementation, performance comparisons, and results, please refer to the [report](report.pdf).
 
+## Getting Started 
+
+Note: the parametere sizes are set within the tests.cpp and timing.cpp and might need to be modified to best suit your needs. 
+
+1. Download the vectorclass library
+```bash
+git clone --branch v2.02.01 https://github.com/vectorclass/version2 vectorclass
+```
+
+2. run the program
+   to run the tests use
+```bash
+g++ -pthread -Ivectorclass -Wall -Wpedantic -std=c++17 -march=haswell -O3 matrixMul.cpp tests.cpp matrixMul.S
+```
+
+  to run the timing sequence
+```bash
+g++ -pthread -Ivectorclass -Wall -Wpedantic -std=c++17 -march=haswell -O3 matrixMul.cpp timing.cpp matrixMul.S
+```
+
 ---
